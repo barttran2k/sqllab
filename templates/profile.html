@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+  <br>
+  <p>Change your profile</p>
+  <form action="/profile" method="post">
+    <lable for="username">Username: </label>
+      <p>{{user}}</p>
+      <lable for='password'>Password</label>
+        <input class='input-lg' type="password" name="password" />
+        <lable for='decription'>Description</label>
+          <input class='input-lg' type="text" name="decription" value="{{decription}}" />
+          <label for='address'>Address</label>
+          <input class='input-lg' type="text" name="address" value="{{address}}" />
+          <input class="btn btn-default" type="submit" value="Change">
+  </form>
+</div>
+{% endblock %}
